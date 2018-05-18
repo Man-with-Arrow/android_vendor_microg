@@ -103,7 +103,6 @@ function get_packages() {
         local package="proprietary/$package_name"
 
         download_package "$repo" "$package"
-        verify_package "$package"
 
         local target_split="${split[1]#-}"
         target_pkg="proprietary/$(target_file $target_split | sed 's/\;.*//')"
